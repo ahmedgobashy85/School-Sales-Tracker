@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-07-12T13:50:17.547Z",
+  "savedAt": "2026-07-12T14:14:44.466Z",
   "rows": [
     {
       "id": "qurtubah",
@@ -220,11 +220,11 @@
       "phone": "—",
       "curriculum": "KG",
       "status": "Quotation sent",
-      "value": null,
+      "value": 92232.99,
       "products": "Alpha Books 2026-2027 (KG3).",
       "docs": "Bloom - Alpha Books 2026-2027",
       "notes": "Alpha KG3 booklist received — prepare quotation.",
-      "updatedAt": "2026-07-12T13:50:16.345Z"
+      "updatedAt": "2026-07-12T14:14:43.256Z"
     }
   ]
 }
