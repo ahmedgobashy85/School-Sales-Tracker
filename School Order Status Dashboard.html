@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Key Accounts — School Order Status Dashboard</title>
+<style>
+  :root{
+    --bg:#0f172a; --panel:#ffffff; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0;
+    --accent:#2563eb; --accent-d:#1d4ed8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       background:#f1f5f9;color:var(--ink);}
+  header.top{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;padding:22px 28px;}
+  header.top h1{margin:0;font-size:22px;font-weight:700;letter-spacing:.2px}
+  header.top p{margin:4px 0 0;opacity:.85;font-size:13px}
+  .wrap{max-width:1400px;margin:0 auto;padding:20px 24px 60px;}
+  /* summary cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:18px 0 22px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;transition:.15s;position:relative}
+  .card:hover{box-shadow:0 6px 18px rgba(2,6,23,.08);transform:translateY(-1px)}
+  .card.active{outline:2px solid var(--accent);outline-offset:0}
+  .card .n{font-size:26px;font-weight:800;line-height:1}
+  .card .l{font-size:11.5px;color:var(--muted);margin-top:6px;text-transform:uppercase;letter-spacing:.4px}
+  .card .dot{width:10px;height:10px;border-radius:50%;position:absolute;top:16px;right:16px}
+  .kpi{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+  .kpi .box{background:#0f172a;color:#fff;border-radius:12px;padding:14px 18px;min-width:180px}
+  .kpi .box .n{font-size:22px;font-weight:800}
+  .kpi .box .l{font-size:11.5px;opacity:.8;text-transform:uppercase;letter-spacing:.4px;margin-top:4px}
+  /* toolbar */
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+  .toolbar input[type=search]{flex:1;min-width:220px;padding:10px 12px;border:1px solid var(--line);border-radius:9px;font-size:14px}
+  .btn{border:1px solid var(--line);background:#fff;padding:9px 14px;border-radius:9px;font-size:13px;font-weight:600;cursor:pointer;color:var(--ink)}
+  .btn:hover{background:#f8fafc}
+  .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .btn.primary:hover{background:var(--accent-d)}
+  .btn.ghost{color:var(--muted)}
+  /* table */
+  .tablewrap{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table{border-collapse:collapse;width:100%;font-size:13.5px}
+  thead th{background:#f8fafc;text-align:left;padding:12px 14px;font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);border-bottom:1px solid var(--line);cursor:pointer;white-space:nowrap}
+  tbody td{padding:12px 14px;border-bottom:1px solid #f1f5f9;vertical-align:top}
+  tbody tr:hover{background:#fafcff}
+  .school{font-weight:700;font-size:14px}
+  .sub{color:var(--muted);font-size:12px;margin-top:3px;line-height:1.5}
+  .pill{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap}
+  .pill .d{width:8px;height:8px;border-radius:50%}
+  select.status{border:1px solid var(--line);border-radius:8px;padding:7px 8px;font-size:12.5px;font-weight:600;width:100%;max-width:210px;background:#fff}
+  textarea.notes{width:100%;min-width:180px;border:1px solid var(--line);border-radius:8px;padding:7px 8px;font-size:12.5px;font-family:inherit;resize:vertical;min-height:38px}
+  input.val{width:120px;border:1px solid var(--line);border-radius:8px;padding:7px 8px;font-size:12.5px;font-family:inherit}
+  .docs{font-size:11.5px;color:var(--muted);line-height:1.6}
+  .docs b{color:#334155}
+  .updated{font-size:11px;color:#94a3b8;margin-top:6px}
+  .val-disp{font-weight:700}
+  .footer-note{color:var(--muted);font-size:12px;margin-top:16px;line-height:1.6}
+  .saved-flash{position:fixed;bottom:20px;right:20px;background:#16a34a;color:#fff;padding:10px 16px;border-radius:10px;font-size:13px;font-weight:600;opacity:0;transition:.3s;pointer-events:none;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+  .saved-flash.show{opacity:1}
+  .region-tag{display:inline-block;background:#eef2ff;color:#4338ca;border-radius:6px;padding:2px 7px;font-size:10.5px;font-weight:700;margin-left:6px}
+  @media (max-width:820px){ .docs{display:none} thead th.doccol{display:none} td.doccol{display:none} }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Key Accounts — School Order Status Dashboard</h1>
+  <p>Academic year 2026–2027 · Creative Education · Editable — your changes save automatically in this browser</p>
+</header>
+
+<div class="wrap">
+  <div class="kpi">
+    <div class="box"><div class="n" id="kpiSchools">0</div><div class="l">Schools tracked</div></div>
+    <div class="box"><div class="n" id="kpiActive">0</div><div class="l">Active (open) orders</div></div>
+    <div class="box"><div class="n" id="kpiValue">SAR 0</div><div class="l">Quoted / approved value</div></div>
+    <div class="box"><div class="n" id="kpiWon">0</div><div class="l">Won (approved + done)</div></div>
+  </div>
+
+  <div class="cards" id="cards"></div>
+
+  <div class="toolbar">
+    <input type="search" id="search" placeholder="Search school, city, contact, product…">
+    <button class="btn primary" id="exportJson">⬇ Export backup (JSON)</button>
+    <button class="btn" id="importJson">⬆ Import backup</button>
+    <button class="btn" id="exportCsv">Export CSV</button>
+    <button class="btn ghost" id="resetBtn">Reset to original</button>
+    <input type="file" id="fileInput" accept="application/json" style="display:none">
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th data-sort="name">School</th>
+          <th data-sort="status">Order status</th>
+          <th data-sort="value">Value (SAR)</th>
+          <th data-sort="products">Products / order</th>
+          <th class="doccol">Documents on file</th>
+          <th data-sort="notes">Notes</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <p class="footer-note">
+    <b>How to use:</b> change any school's <b>Order status</b> from the dropdown, edit the <b>Value</b> or <b>Notes</b>, and it saves instantly in this browser. Use <b>Export backup</b> to keep a JSON copy (and to move data to another computer via <b>Import</b>). Click a summary card to filter; click a column header to sort.<br>
+    Source data compiled from the "Status and customer list 2026" workbook and each school's order / quotation / PO / payment files in the Key Accounts folder.
+  </p>
+</div>
+
+<div class="saved-flash" id="flash">Saved ✓</div>
+
+<script>
+/* ---------- Status definitions (label -> colour) ---------- */
+const STATUSES = [
+  {k:"Delivered / Done",            c:"#16a34a", group:"won"},
+  {k:"Approved – PO collected",     c:"#0d9488", group:"won"},
+  {k:"Under approval",              c:"#2563eb", group:"active"},
+  {k:"Confirmed – pending payment", c:"#d97706", group:"active"},
+  {k:"Pending late payment",        c:"#ea580c", group:"active"},
+  {k:"Quotation sent",              c:"#6366f1", group:"active"},
+  {k:"Demo sent",                   c:"#9333ea", group:"active"},
+  {k:"Booklist received",           c:"#0891b2", group:"active"},
+  {k:"Pending follow-up",           c:"#f59e0b", group:"active"},
+  {k:"Lead / new",                  c:"#64748b", group:"active"},
+  {k:"Canceled / Declined",         c:"#dc2626", group:"lost"}
+];
+const statusColor = s => (STATUSES.find(x=>x.k===s)||{c:"#64748b"}).c;
+const statusGroup = s => (STATUSES.find(x=>x.k===s)||{group:"active"}).group;
+
+/* ---------- Original dataset ---------- */
+const DEFAULT_DATA = [
+  {id:"qurtubah", name:"Qurtubah International School", city:"Jeddah", region:"Makkah",
+   contact:"Ikramy Farrag, Ezzat (Accounting)", phone:"0553003966 / 0501300489",
+   curriculum:"American · K-12", status:"Approved – PO collected", value:1463584.71,
+   products:"K-12 English, Math, Science — Savvas & Alpha. 205 titles across 11 quotations.",
+   docs:"11 POs (QTR000045–56); quotation QRT000056; payment plan (advance + 3 installments to 30-12-2026); bank statement; cheques 2026",
+   notes:"Largest account. PO collected & approved. 4-installment payment schedule agreed (~351,902 SAR each)."},
+
+  {id:"alafkar", name:"Al Afkar International School", city:"Jeddah", region:"Makkah",
+   contact:"Rajaa AlHakamy (Owner), Reem AlHakamy, Rasha AlAwwa", phone:"0566779091 / 0566267163",
+   curriculum:"American / British · K-8", status:"Quotation sent", value:269256.91,
+   products:"K-8 Savvas & Alpha (incl. Elevate Science). 942 titles.",
+   docs:"Booklist 2026; quotation AFR000058 (01/07/2026)",
+   notes:"Quotation AFR000058 sent — 942 items, 269,256.91 SAR incl. VAT. Awaiting approval."},
+
+  {id:"greenpeaks", name:"Green Peaks International School", city:"Jeddah", region:"Makkah",
+   contact:"Israa (Owner), Sara Adam (Academic Dir.)", phone:"0544549992 / 0536104043",
+   curriculum:"American · K-8", status:"Quotation sent", value:257642.27,
+   products:"1-8 Savvas (Elevate Science, MyView), Obelas & Alpha. 764 titles.",
+   docs:"Booklist (Savvas); quotation GPS000008-4 (06/07/2026)",
+   notes:"Quotation GPS000008 sent — 764 items, 257,642.27 SAR incl. VAT."},
+
+  {id:"greengrass", name:"Green Grass International School", city:"Jeddah", region:"Makkah",
+   contact:"Lama AlSayed (Owner); Bashayer AlDairy, Haya, Shrook (Coord./Acct.)", phone:"0920008757",
+   curriculum:"American · K-8", status:"Under approval", value:null,
+   products:"K-8 all Savvas & Alpha. 658 titles ordered.",
+   docs:"Booklist 2026 (658 items); PO 2026-27 on file",
+   notes:"Order placed (658 items), PO received — with school for final approval."},
+
+  {id:"ajool", name:"Ajool International School", city:"Jeddah", region:"Makkah",
+   contact:"Mansour (Owner), Haifa (Manager), Hala Othman (Academic Dir.)", phone:"0566562112 / 0504537773",
+   curriculum:"American · K-6", status:"Pending late payment", value:null,
+   products:"K-6 all Savvas & Alpha.",
+   docs:"Ajool order 2026 booklist",
+   notes:"Order confirmed & delivered; payment overdue — follow up on late payment (~100K noted)."},
+
+  {id:"durat", name:"Durat Al-Sharq International School", city:"Jeddah", region:"Makkah",
+   contact:"AbdulRahman AlFayez (GM), Ali Ragab, Abeer Abbas (Academic Dir.)", phone:"0545228865 / 0575678420 / 0569192814",
+   curriculum:"American · K-12", status:"Quotation sent", value:null,
+   products:"Savvas 1-12 + Alpha Literature. Orders: Complete Coursebook (G1,3,6,8,11), MyView ELA, OBE ELA.",
+   docs:"3 order files: Complete Coursebook, MyView, OBE ELA",
+   notes:"In progress — quotation stage. Multiple order files prepared across programs."},
+
+  {id:"abaq", name:"Abaq Al-Elm International School", city:"Jeddah", region:"Makkah",
+   contact:"Muzammil Aslam (Academic Coord.), AbdulRahman Fayez (GM)", phone:"0547365375",
+   curriculum:"British · Cambridge · K-9", status:"Canceled / Declined", value:null,
+   products:"IG / Cambridge.",
+   docs:"Booklist sent",
+   notes:"List sent then canceled. Cambridge curriculum — not a current Savvas/Alpha fit."},
+
+  {id:"cedar", name:"Cedar International School", city:"Jeddah", region:"Makkah",
+   contact:"Ghaitha (Academic Director)", phone:"—",
+   curriculum:"American · K-12", status:"Confirmed – pending payment", value:null,
+   products:"Science K-8 + Alpha Math KG (McGraw Hill / Savvas / Alpha).",
+   docs:"—",
+   notes:"Order confirmed — awaiting payment."},
+
+  {id:"shrook", name:"Shurooq Al-Mamlaka International School", city:"Taif", region:"Taif",
+   contact:"Majid AlRobaian (Owner), Dr. Siraj AlHarthi (GM), Mohamed Omar (Acct.)", phone:"0546007009 / 0500452323 / 0552556248",
+   curriculum:"International · K-12 (Boys & Girls)", status:"Delivered / Done", value:null,
+   products:"K-12 English, Math, Science.",
+   docs:"—",
+   notes:"Completed and delivered."},
+
+  {id:"maali", name:"Maali Creative International School", city:"Taif", region:"Makkah",
+   contact:"Adnan AlThubaity (Owner), Mohamed (Acct.)", phone:"0566662670 / 0565204076",
+   curriculum:"American", status:"Delivered / Done", value:null,
+   products:"Obelas K1–K3.",
+   docs:"—",
+   notes:"Completed and delivered."},
+
+  {id:"kenz", name:"Kenz International School", city:"Rabigh", region:"Makkah",
+   contact:"Shimna (Owner), Safarul (Accounting)", phone:"0531968443 / 0501249645",
+   curriculum:"British · Cambridge", status:"Canceled / Declined", value:null,
+   products:"IG / Cambridge.",
+   docs:"KAIS Book Order 2026-27 (with ISBN) v8",
+   notes:"Request for quotation declined. Cambridge curriculum."},
+
+  {id:"bluemoon", name:"Blue Moon Daycare", city:"Jeddah", region:"Makkah",
+   contact:"Nada (Owner)", phone:"0504943138",
+   curriculum:"KG", status:"Pending follow-up", value:null,
+   products:"Alpha KG.",
+   docs:"—",
+   notes:"Interested in Alpha KG — pending follow-up."},
+
+  {id:"jeddah", name:"Jeddah International School", city:"Jeddah", region:"Makkah",
+   contact:"Tarek Harazy (Owner), Abdul Nassar (Library)", phone:"—",
+   curriculum:"American · K-12", status:"Demo sent", value:null,
+   products:"Alpha Literature 6-12.",
+   docs:"—",
+   notes:"Demo sent for Alpha Literature 6-12."},
+
+  {id:"alnassr", name:"Al Nassr Private School", city:"—", region:"—",
+   contact:"—", phone:"—",
+   curriculum:"—", status:"Quotation sent", value:null,
+   products:"Go for English (2026-2027).",
+   docs:"Go for English books order/request 2026-2027",
+   notes:"Quotation requested for Go for English — quotation sent."},
+
+  {id:"alkawthar", name:"AlKawthar International School", city:"—", region:"—",
+   contact:"—", phone:"—",
+   curriculum:"—", status:"Booklist received", value:null,
+   products:"English book order (93 titles).",
+   docs:"English Book Order booklist",
+   notes:"English booklist received — not yet quoted. Needs contact details & quotation."},
+
+  {id:"bloom", name:"Bloom", city:"—", region:"—",
+   contact:"—", phone:"—",
+   curriculum:"KG", status:"Booklist received", value:null,
+   products:"Alpha Books 2026-2027 (KG3).",
+   docs:"Bloom - Alpha Books 2026-2027",
+   notes:"Alpha KG3 booklist received — prepare quotation."}
+];
+
+/* ---------- Persistence ---------- */
+const LS_KEY = "keyAccountsOrderDashboard_v1";
+function loadData(){
+  try{
+    const saved = JSON.parse(localStorage.getItem(LS_KEY));
+    if(saved && Array.isArray(saved.rows)){
+      // merge: start from defaults, apply saved edits by id, keep any extra saved rows
+      const REMOVED_IDS = ["hopemakers"];
+      const map = {};
+      DEFAULT_DATA.forEach(d=>map[d.id]={...d});
+      saved.rows.forEach(r=>{ map[r.id] = {...(map[r.id]||{}), ...r}; });
+      REMOVED_IDS.forEach(id=>delete map[id]);
+      return Object.values(map);
+    }
+  }catch(e){}
+  return DEFAULT_DATA.map(d=>({...d}));
+}
+let DATA = loadData();
+function persist(){
+  localStorage.setItem(LS_KEY, JSON.stringify({savedAt:new Date().toISOString(), rows:DATA}));
+  flash();
+}
+let flashT;
+function flash(){ const f=document.getElementById('flash'); f.classList.add('show'); clearTimeout(flashT); flashT=setTimeout(()=>f.classList.remove('show'),1200); }
+
+/* ---------- State ---------- */
+let filterStatus = null;
+let searchTerm = "";
+let sortKey = "value", sortDir = -1;
+
+/* ---------- Rendering ---------- */
+const fmt = n => (n||n===0) ? "SAR " + Number(n).toLocaleString("en-US",{maximumFractionDigits:2}) : "—";
+
+function renderCards(){
+  const counts = {};
+  STATUSES.forEach(s=>counts[s.k]=0);
+  DATA.forEach(r=>{ counts[r.status]=(counts[r.status]||0)+1; });
+  const el = document.getElementById('cards');
+  el.innerHTML = STATUSES.map(s=>`
+    <div class="card ${filterStatus===s.k?'active':''}" data-status="${s.k}">
+      <span class="dot" style="background:${s.c}"></span>
+      <div class="n" style="color:${s.c}">${counts[s.k]||0}</div>
+      <div class="l">${s.k}</div>
+    </div>`).join("");
+  el.querySelectorAll('.card').forEach(c=>c.onclick=()=>{
+    const st=c.getAttribute('data-status');
+    filterStatus = (filterStatus===st)?null:st;
+    render();
+  });
+}
+
+function renderKpis(){
+  const schools = DATA.length;
+  const active = DATA.filter(r=>statusGroup(r.status)==="active").length;
+  const won = DATA.filter(r=>statusGroup(r.status)==="won").length;
+  const value = DATA.reduce((a,r)=>a+(Number(r.value)||0),0);
+  document.getElementById('kpiSchools').textContent = schools;
+  document.getElementById('kpiActive').textContent = active;
+  document.getElementById('kpiWon').textContent = won;
+  document.getElementById('kpiValue').textContent = fmt(value);
+}
+
+function statusSelect(r){
+  return `<select class="status" data-id="${r.id}">${
+    STATUSES.map(s=>`<option value="${s.k}" ${s.k===r.status?'selected':''}>${s.k}</option>`).join("")
+  }</select>`;
+}
+
+function filteredSorted(){
+  let rows = DATA.slice();
+  if(filterStatus) rows = rows.filter(r=>r.status===filterStatus);
+  if(searchTerm){
+    const t=searchTerm.toLowerCase();
+    rows = rows.filter(r=>[r.name,r.city,r.contact,r.products,r.curriculum,r.notes,r.status].join(" ").toLowerCase().includes(t));
+  }
+  rows.sort((a,b)=>{
+    let x=a[sortKey], y=b[sortKey];
+    if(sortKey==="value"){ x=Number(x)||-1; y=Number(y)||-1; return (x-y)*sortDir; }
+    x=(x||"").toString().toLowerCase(); y=(y||"").toString().toLowerCase();
+    return x<y? -sortDir : x>y? sortDir : 0;
+  });
+  return rows;
+}
+
+function render(){
+  renderCards(); renderKpis();
+  const rows = filteredSorted();
+  const tb = document.getElementById('tbody');
+  tb.innerHTML = rows.map(r=>`
+    <tr data-id="${r.id}">
+      <td>
+        <div class="school">${r.name}${r.region&&r.region!=="—"?`<span class="region-tag">${r.city!=="—"?r.city:r.region}</span>`:""}</div>
+        <div class="sub">${r.curriculum||""}${r.contact&&r.contact!=="—"?" · "+r.contact:""}${r.phone&&r.phone!=="—"?"<br>"+r.phone:""}</div>
+      </td>
+      <td>
+        <div class="pill" style="background:${statusColor(r.status)}18;color:${statusColor(r.status)};margin-bottom:6px">
+          <span class="d" style="background:${statusColor(r.status)}"></span>${r.status}
+        </div>
+        ${statusSelect(r)}
+        <div class="updated" data-upd="${r.id}">${r.updatedAt?("Updated "+new Date(r.updatedAt).toLocaleDateString()):""}</div>
+      </td>
+      <td>
+        <div class="val-disp" data-vdisp="${r.id}" style="margin-bottom:5px">${fmt(r.value)}</div>
+        <input class="val" type="number" step="0.01" data-id="${r.id}" placeholder="value" value="${r.value!=null?r.value:''}">
+      </td>
+      <td style="max-width:280px"><div class="sub" style="color:#334155">${r.products||"—"}</div></td>
+      <td class="doccol"><div class="docs">${r.docs&&r.docs!=="—"?r.docs:"<i>none</i>"}</div></td>
+      <td><textarea class="notes" data-id="${r.id}">${r.notes||""}</textarea></td>
+    </tr>`).join("");
+
+  // wire events
+  tb.querySelectorAll('select.status').forEach(sel=>sel.onchange=e=>{
+    const id=e.target.getAttribute('data-id'); const row=DATA.find(r=>r.id===id);
+    row.status=e.target.value; row.updatedAt=new Date().toISOString(); persist(); render();
+  });
+  tb.querySelectorAll('input.val').forEach(inp=>inp.onchange=e=>{
+    const id=e.target.getAttribute('data-id'); const row=DATA.find(r=>r.id===id);
+    row.value = e.target.value===""?null:parseFloat(e.target.value); row.updatedAt=new Date().toISOString();
+    persist();
+    document.querySelector(`[data-vdisp="${id}"]`).textContent = fmt(row.value);
+    renderKpis();
+  });
+  tb.querySelectorAll('textarea.notes').forEach(t=>t.onchange=e=>{
+    const id=e.target.getAttribute('data-id'); const row=DATA.find(r=>r.id===id);
+    row.notes=e.target.value; row.updatedAt=new Date().toISOString(); persist();
+    const u=document.querySelector(`[data-upd="${id}"]`); if(u) u.textContent="Updated "+new Date().toLocaleDateString();
+  });
+}
+
+/* ---------- Toolbar actions ---------- */
+document.getElementById('search').oninput = e=>{ searchTerm=e.target.value; render(); };
+document.querySelectorAll('thead th[data-sort]').forEach(th=>th.onclick=()=>{
+  const k=th.getAttribute('data-sort');
+  if(sortKey===k) sortDir*=-1; else { sortKey=k; sortDir=(k==="value")?-1:1; }
+  render();
+});
+document.getElementById('exportJson').onclick = ()=>{
+  const blob=new Blob([JSON.stringify({savedAt:new Date().toISOString(),rows:DATA},null,2)],{type:"application/json"});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download="school-order-status-backup-"+new Date().toISOString().slice(0,10)+".json"; a.click();
+};
+document.getElementById('importJson').onclick = ()=>document.getElementById('fileInput').click();
+document.getElementById('fileInput').onchange = e=>{
+  const f=e.target.files[0]; if(!f) return;
+  const rd=new FileReader();
+  rd.onload=()=>{ try{ const o=JSON.parse(rd.result);
+      if(o&&Array.isArray(o.rows)){ DATA=o.rows; persist(); render(); alert("Backup imported."); }
+      else alert("Invalid backup file."); }catch(err){ alert("Could not read file."); } };
+  rd.readAsText(f);
+};
+document.getElementById('exportCsv').onclick = ()=>{
+  const cols=["name","city","region","curriculum","status","value","products","contact","phone","docs","notes","updatedAt"];
+  const esc=v=>'"'+String(v==null?"":v).replace(/"/g,'""')+'"';
+  const csv=[cols.join(",")].concat(DATA.map(r=>cols.map(c=>esc(r[c])).join(","))).join("\n");
+  const blob=new Blob([csv],{type:"text/csv"}); const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download="school-order-status.csv"; a.click();
+};
+document.getElementById('resetBtn').onclick = ()=>{
+  if(confirm("Reset all statuses, values and notes back to the original data? This clears your saved edits.")){
+    localStorage.removeItem(LS_KEY); DATA=DEFAULT_DATA.map(d=>({...d})); filterStatus=null; render();
+  }
+};
+
+render();
+</script>
+</body>
+</html>
