@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-07-13T12:28:50.402Z",
+ "savedAt": "2026-07-13T12:29:11.819Z",
  "schools": [
   {
    "id": "ajool",
@@ -496,7 +496,7 @@
     }
    ],
    "status": "Approved – PO collected",
-   "value": 174700,
+   "value": null,
    "products": "1-8 Savvas (Elevate Science, MyView), Obelas & Alpha. 764 titles.",
    "docs": "Booklist (Savvas); quotation GPS000008-4 (06/07/2026)",
    "notes": "Quotation GPS000008 sent — 764 items, 174,700.53 SAR incl. VAT.",
