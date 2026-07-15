@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-07-13T12:45:51.446Z",
+ "savedAt": "2026-07-15T09:07:09.881Z",
  "schools": [
   {
    "id": "ajool",
@@ -433,12 +433,12 @@
      "notes": ""
     }
    ],
-   "status": "Under approval",
+   "status": "Approved – PO collected",
    "value": null,
    "products": "K-8 all Savvas & Alpha. 658 titles ordered.",
    "docs": "Booklist 2026 (658 items); PO 2026-27 on file",
    "notes": "Order placed (658 items), PO received — with school for final approval.",
-   "updatedAt": null,
+   "updatedAt": "2026-07-15T09:07:08.677Z",
    "orders": [
     {
      "id": "greengrass-o1",
