@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-07-21T12:46:21.309Z",
+ "savedAt": "2026-07-21T12:47:11.844Z",
  "schools": [
   {
    "id": "ajool",
@@ -887,12 +887,12 @@
      "notes": ""
     }
    ],
-   "status": "Pending follow-up",
+   "status": "Quotation sent",
    "value": null,
    "products": "Alpha KG.",
    "docs": "—",
    "notes": "Interested in Alpha KG — pending follow-up.",
-   "updatedAt": null,
+   "updatedAt": "2026-07-21T12:47:10.634Z",
    "orders": [
     {
      "id": "bluemoon-o1",
