@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-07-26T06:47:59.783Z",
+ "savedAt": "2026-07-26T06:50:43.850Z",
  "schools": [
   {
    "id": "ajool",
@@ -54,7 +54,7 @@
     }
    ],
    "status": "Quotation sent",
-   "value": null,
+   "value": 20365206,
    "products": "K-6 all Savvas & Alpha.",
    "docs": "Ajool order 2026 booklist",
    "notes": "Order confirmed & delivered; payment overdue — follow up on late payment (~100K noted).",
