@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-07-26T12:56:06.412Z",
+ "savedAt": "2026-07-27T06:34:44.374Z",
  "schools": [
   {
    "id": "ajool",
@@ -1029,6 +1029,32 @@
      "notes": "Quotation prepared — 92,232.99 SAR."
     }
    ]
+  },
+  {
+   "name": "Sidrah Knowledge Academy",
+   "nameAr": "أكاديمية سدرة المعرفه",
+   "code": "SKA-K6-JD",
+   "city": "Jeddah",
+   "district": "North Obhur",
+   "region": "Makkah",
+   "curriculum": "K-6",
+   "grades": "K-6",
+   "tuition": "",
+   "phone": "0575900300",
+   "whatsapp": "",
+   "email": "info@ska.edu.sa",
+   "website": "www.ska-edu.com",
+   "address": "",
+   "mapsUrl": "https://maps.app.goo.gl/xUTqTsd7DA4fHar7A",
+   "status": "Lead / new",
+   "value": null,
+   "products": "",
+   "docs": "",
+   "notes": "",
+   "contacts": [],
+   "id": "sidrah-knowledge-academy-ms2uqq1u",
+   "orders": [],
+   "updatedAt": "2026-07-27T06:34:43.170Z"
   }
  ]
 }
