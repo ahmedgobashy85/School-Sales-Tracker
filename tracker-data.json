@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-07-27T06:35:41.663Z",
+ "savedAt": "2026-07-27T08:31:59.814Z",
  "schools": [
   {
    "id": "ajool",
@@ -207,12 +207,12 @@
      "notes": ""
     }
    ],
-   "status": "Canceled / Declined",
+   "status": "Quotation sent",
    "value": null,
    "products": "IG / Cambridge.",
    "docs": "Booklist sent",
    "notes": "List sent then canceled. Cambridge curriculum — no MOE approval.",
-   "updatedAt": "2026-07-12T14:20:13.336Z",
+   "updatedAt": "2026-07-27T08:31:58.611Z",
    "orders": [
     {
      "id": "abaq-o1",
