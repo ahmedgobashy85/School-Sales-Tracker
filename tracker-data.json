@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-07-27T08:31:59.814Z",
+ "savedAt": "2026-07-27T09:35:59.835Z",
  "schools": [
   {
    "id": "ajool",
@@ -1009,13 +1009,24 @@
    "gradeStages": "",
    "tuition": "",
    "curriculum": "KG",
-   "contacts": [],
+   "contacts": [
+    {
+     "name": "Al Hasan",
+     "role": "Procurement",
+     "mobile": "",
+     "email": "",
+     "whatsapp": "",
+     "decisionMaker": false,
+     "primary": false,
+     "notes": ""
+    }
+   ],
    "status": "Quotation sent",
    "value": 92232.99,
    "products": "Alpha Books 2026-2027 (KG3).",
    "docs": "Bloom - Alpha Books 2026-2027",
    "notes": "Alpha KG3 booklist received — prepare quotation.",
-   "updatedAt": "2026-07-12T14:14:43.256Z",
+   "updatedAt": "2026-07-27T09:35:58.632Z",
    "orders": [
     {
      "id": "bloom-o1",
