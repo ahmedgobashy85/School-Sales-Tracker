@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-07-27T09:35:59.835Z",
+ "savedAt": "2026-07-28T14:01:47.748Z",
  "schools": [
   {
    "id": "ajool",
@@ -709,6 +709,26 @@
      "primary": false,
      "decisionMaker": false,
      "notes": ""
+    },
+    {
+     "name": "Romar Pascual ",
+     "role": "Academic Coordinator",
+     "mobile": "0580154231",
+     "email": "Romar Pascual <romar0886@gmail.com>",
+     "whatsapp": "",
+     "decisionMaker": false,
+     "primary": false,
+     "notes": ""
+    },
+    {
+     "name": "Marjery Madula",
+     "role": "Academic Coordinator",
+     "mobile": "0571140595",
+     "email": "romarjery@gmail.com",
+     "whatsapp": "",
+     "decisionMaker": false,
+     "primary": false,
+     "notes": ""
     }
    ],
    "status": "Approved – PO collected",
@@ -716,7 +736,7 @@
    "products": "K-12 English, Math, Science.",
    "docs": "—",
    "notes": "Approved - Waiting payment confirmation.",
-   "updatedAt": "2026-07-12T14:19:47.717Z",
+   "updatedAt": "2026-07-28T14:01:46.537Z",
    "orders": [
     {
      "id": "shrook-o1",
