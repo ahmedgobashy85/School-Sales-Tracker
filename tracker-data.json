@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-07-28T14:01:47.748Z",
+ "savedAt": "2026-07-29T14:06:29.116Z",
  "schools": [
   {
    "id": "ajool",
@@ -1014,9 +1014,9 @@
    "code": "",
    "name": "Bloom",
    "nameAr": "",
-   "city": "",
+   "city": "Jeddah",
    "district": "",
-   "region": "",
+   "region": "Makkah",
    "website": "",
    "email": "",
    "phone": "",
@@ -1025,7 +1025,7 @@
    "mapsUrl": "",
    "schoolType": "",
    "genders": "",
-   "grades": "",
+   "grades": "K-5",
    "gradeStages": "",
    "tuition": "",
    "curriculum": "KG",
@@ -1046,7 +1046,7 @@
    "products": "Alpha Books 2026-2027 (KG3).",
    "docs": "Bloom - Alpha Books 2026-2027",
    "notes": "Alpha KG3 booklist received — prepare quotation.",
-   "updatedAt": "2026-07-27T09:35:58.632Z",
+   "updatedAt": "2026-07-29T14:06:27.912Z",
    "orders": [
     {
      "id": "bloom-o1",
