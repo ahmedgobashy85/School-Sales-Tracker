@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-07-29T14:07:01.208Z",
+ "savedAt": "2026-08-04T08:46:35.857Z",
  "schools": [
   {
    "id": "ajool",
@@ -1077,7 +1077,7 @@
    "website": "www.ska-edu.com",
    "address": "",
    "mapsUrl": "https://maps.app.goo.gl/xUTqTsd7DA4fHar7A",
-   "status": "Lead / new",
+   "status": "Canceled / Declined",
    "value": null,
    "products": "",
    "docs": "",
@@ -1085,7 +1085,7 @@
    "contacts": [],
    "id": "sidrah-knowledge-academy-ms2uqq1u",
    "orders": [],
-   "updatedAt": "2026-07-27T06:34:43.170Z"
+   "updatedAt": "2026-08-04T08:46:34.645Z"
   }
  ]
 }
