@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-08-04T14:23:53.121Z",
+ "savedAt": "2026-08-11T14:04:15.000Z",
  "schools": [
   {
    "id": "ajool",
@@ -53,23 +53,70 @@
      "notes": ""
     }
    ],
-   "status": "Quotation sent",
-   "value": null,
+   "status": "Pending late payment",
+   "value": 203652.06,
    "products": "K-6 all Savvas & Alpha.",
-   "docs": "Ajool order 2026 booklist",
-   "notes": "Payment overdue — follow up on late payment (~100K noted).",
-   "updatedAt": "2026-07-26T12:56:05.210Z",
+   "docs": "AIS000051.pdf; Ajool order 2026 booklist",
+   "notes": "TWO DISTINCT OPEN THREADS — do not collapse. (1) New quotation AIS000051, 203,652.06 SAR, issued 2026-07-21 with price updated per management: NO RESPONSE from the school since. (2) Separately, the prior 2026 order carries an overdue balance of roughly 100,000 SAR — approximate and uninvoiced, NOT included in the figure above and should not enter pipeline totals without being marked an estimate. Curriculum-replacement proposal (NCC compliance, Obelas recommended) sent 2026-07-28 — awaiting the school's response. OPEN 2026-08-11: warehouse is chasing the status of DN CEDC-DNN-000002024 (sample SO CEDC-SAMPLE-00000226, PL CEDC-004561), asking for the signed DN if already delivered — unresolved; warehouse reports it is still sitting in the warehouse. CORRECTION: the earlier tracker note 'order confirmed & delivered' was wrong — supplier/warehouse and sample movements are not school deliveries.",
+   "updatedAt": "2026-08-11T14:04:15.000Z",
    "orders": [
     {
      "id": "ajool-o1",
      "date": "2026-05",
      "ref": "Ajool order 2026",
+     "title": "Prior 2026 order — K-6 Savvas & Alpha",
+     "items": "",
+     "value": null,
+     "status": "Pending late payment",
+     "kind": "legacy",
+     "state": "invoiced",
+     "docs": "Ajool order 2026 booklist",
+     "notes": "Overdue balance ~100,000 SAR — APPROXIMATE and uninvoiced. Do not include in pipeline totals without marking it as an estimate. Follow up on collection."
+    },
+    {
+     "id": "ajool-o2",
+     "date": "2026-07-21",
+     "ref": "AIS000051",
      "title": "K-6 all Savvas & Alpha",
      "items": "",
      "value": 203652.06,
      "status": "Quotation sent",
-     "docs": "Ajool order 2026 booklist",
-     "notes": "Delivered; payment overdue — follow up (~100K noted)."
+     "kind": "main",
+     "state": "issued",
+     "docs": "AIS000051.pdf",
+     "notes": "Issued 2026-07-21 with price updated per management. No response from the school since issuance. Samples delivered under SO CEDC-SAMPLE-00000226 / DN CEDC-DNN-000002024 — signed copy still outstanding, warehouse chasing 08-11."
+    }
+   ],
+   "aliases": [
+    "Ajool International School",
+    "AJOOL INT'L SCHOOL",
+    "AJIS"
+   ],
+   "folderName": "Ajool International School",
+   "lastUpdate": "2026-08-11",
+   "lastUpdateChannel": "email",
+   "obelasReplacement": {
+    "requested": true,
+    "titles": "Proposed 2026-07-28 (NCC compliance)",
+    "schoolContact": "",
+    "state": "requested",
+    "blocker": "Awaiting the school's response to the proposal."
+   },
+   "openActions": [
+    {
+     "text": "No response to quotation AIS000051 since 2026-07-21 — follow up.",
+     "since": "2026-07-21",
+     "owner": "Ahmed"
+    },
+    {
+     "text": "Collect the ~100,000 overdue balance on the prior 2026 order.",
+     "since": "2026-07-26",
+     "owner": "Ahmed"
+    },
+    {
+     "text": "Resolve the signed DN for CEDC-DNN-000002024 (warehouse chasing).",
+     "since": "2026-08-11",
+     "owner": "Warehouse"
     }
    ]
   },
@@ -125,23 +172,53 @@
      "notes": ""
     }
    ],
-   "status": "Quotation sent",
-   "value": 269256.91,
-   "products": "K-8 Savvas & Alpha (incl. Elevate Science). 942 titles.",
-   "docs": "Booklist 2026; quotation AFR000058 (01/07/2026)",
-   "notes": "Quotation AFR000058 sent — 942 items, 269,256.91 SAR incl. VAT. Awaiting approval.",
-   "updatedAt": null,
+   "status": "Approved – PO collected",
+   "value": 266425.79,
+   "products": "K-8 Savvas & Alpha (incl. Elevate Science). 942 titles (revised).",
+   "docs": "PO. AFR000058; Booklist 2026; quotation AFR000058 (final revision)",
+   "notes": "PO received 2026-08-02/03. Final value 266,425.79 SAR — quotation AFR000058 revised three times (titles dropped 07-23, Envision Math WB removed 07-28, quantities updated 07-29, extra 5% discount applied at PO stage). PREVIOUS TRACKER VALUE 269,256.91 WAS STALE. Payment: 35,000 advance transferred; balance 231,425.79 via 3 promissory notes requested 08-03/04 — 70,000 due 2026-10-30; 70,000 due 2026-12-30; 91,425.79 due '30/02/2027' (INVALID DATE as written in the source email — almost certainly end-Feb 2027; verify, do not silently correct). A separate 899 SAR transfer on 08-01 is unrelated. Fulfilment: SO CEDC-SO-000001110; PLs CEDC-004599 and CEDC-004678 both fully picked 08-04/08-06. OBELAS RETURN BLOCKED: Tarek requested collection of all myView, Math and Science for middle school (contact Reem, academic director), but PO AFR000058 contains only ELA/phonics — no Math or Science. Ahmed raised this and has had no clarification.",
+   "updatedAt": "2026-08-11T14:04:15.000Z",
    "orders": [
     {
      "id": "alafkar-o1",
-     "date": "2026-07-01",
+     "date": "2026-08-02",
      "ref": "AFR000058",
      "title": "K-8 Savvas & Alpha (incl. Elevate Science)",
-     "items": "942 titles",
-     "value": 269256.91,
-     "status": "Quotation sent",
-     "docs": "Booklist 2026; quotation AFR000058",
-     "notes": "269,256.91 SAR incl. VAT — awaiting approval."
+     "items": "942 titles (revised)",
+     "value": 266425.79,
+     "status": "Approved – PO collected",
+     "kind": "main",
+     "state": "po_received",
+     "supersedes": "AFR000058 (rev. 269,256.91)",
+     "docs": "PO. AFR000058; Booklist 2026; quotation AFR000058",
+     "notes": "266,425.79 SAR incl. VAT after three revisions and an extra 5% discount at PO stage. 35,000 advance paid; balance 231,425.79 on 3 promissory notes (70,000 @ 2026-10-30; 70,000 @ 2026-12-30; 91,425.79 @ '30/02/2027' — invalid date as written, flag). SO CEDC-SO-000001110; PLs CEDC-004599 & CEDC-004678 fully picked. Further PP warehouse stock PPSA-DN-000016798 received 08-10/11. Sample batch CEDC-SAM-224 / CEDC-DNN-000002025 / CEDC-004560 delivered 08-04 (sample, not order fulfilment)."
+    }
+   ],
+   "aliases": [
+    "Al Afkar International School",
+    "al afkar Int'l - jed",
+    "AAIS"
+   ],
+   "folderName": "Al Afkar International School",
+   "lastUpdate": "2026-08-11",
+   "lastUpdateChannel": "email",
+   "obelasReplacement": {
+    "requested": true,
+    "titles": "myView, Math, Science — middle school",
+    "schoolContact": "Reem (academic director)",
+    "state": "blocked",
+    "blocker": "PO AFR000058 is ELA/phonics only — no Math or Science."
+   },
+   "openActions": [
+    {
+     "text": "Get clarification on the Obelas return: PO AFR000058 has no Math or Science titles. Raised with Tarek, no answer.",
+     "since": "2026-08-03",
+     "owner": "Ahmed"
+    },
+    {
+     "text": "Verify the 91,425.79 promissory note date written as '30/02/2027'.",
+     "since": "2026-08-04",
+     "owner": "Finance"
     }
    ]
   },
@@ -207,12 +284,12 @@
      "notes": ""
     }
    ],
-   "status": "Quotation sent",
+   "status": "Pending follow-up",
    "value": null,
-   "products": "IG / Cambridge.",
-   "docs": "Booklist sent",
-   "notes": "List sent then canceled. Cambridge curriculum — no MOE approval.",
-   "updatedAt": "2026-07-27T08:31:58.611Z",
+   "products": "Obelas ELA trial K1–K5 (1 month). Previously IG / Cambridge (cancelled).",
+   "docs": "— (school folder is empty; no local documents at all)",
+   "notes": "LIVE OPPORTUNITY — status corrected from 'Canceled / Declined'. The Cambridge deal was cancelled (no MOE/NCC approval), but the Obelas ELA trial (K1–K5, 1 month) is a NEW and separate opportunity. Sample SO CEDC-SAMPLE-00000236; both batches DELIVERED TO AND SIGNED FOR BY THE SCHOOL, confirmed 2026-08-03/04: DN CEDC-DNN-000002028 / PL CEDC-004542 and DN CEDC-DNN-000002013 / PL CEDC-004541. Invoiced CEDC-CINV-000001829; ServiceHub ticket CEDC-0726-00000026 closed 08-04. Ahmed escalated the delay internally 08-02 (samples had sat in the Jeddah warehouse; root cause a WhatsApp notification gap) — resolved. NO QUOTATION ISSUED YET. Next action: chase trial feedback and convert to a quotation. Note these are trial/sample deliveries, so the account is not 'delivered' in order terms. The school folder is EMPTY — no local documents on file.",
+   "updatedAt": "2026-08-11T14:04:15.000Z",
    "orders": [
     {
      "id": "abaq-o1",
@@ -222,8 +299,40 @@
      "items": "",
      "value": null,
      "status": "Canceled / Declined",
+     "kind": "main",
+     "state": "cancelled",
      "docs": "Booklist sent",
-     "notes": "List sent then canceled — Cambridge curriculum, no MOE approval."
+     "notes": "List sent then canceled — Cambridge curriculum, no MOE/NCC approval."
+    },
+    {
+     "id": "abaq-o2",
+     "date": "2026-08-04",
+     "ref": "CEDC-SAMPLE-00000236",
+     "title": "Obelas ELA trial K1–K5 (1 month)",
+     "items": "",
+     "value": null,
+     "status": "Pending follow-up",
+     "kind": "trial",
+     "state": "delivered_signed",
+     "docs": "",
+     "notes": "Both sample batches delivered to and signed for by the school 2026-08-03/04 (DN CEDC-DNN-000002028 / PL CEDC-004542; DN CEDC-DNN-000002013 / PL CEDC-004541). Invoiced CEDC-CINV-000001829; ticket CEDC-0726-00000026 closed 08-04. No quotation issued yet — chase trial feedback and convert."
+    }
+   ],
+   "aliases": [
+    "Abaq AlElm",
+    "Abaq Al-Elm International School",
+    "Abaq Al Ilm Intl' School-Jed",
+    "Abaq Al-Ilm",
+    "AAEIS"
+   ],
+   "folderName": "Abaq AlElm International School",
+   "lastUpdate": "2026-08-04",
+   "lastUpdateChannel": "email",
+   "openActions": [
+    {
+     "text": "Chase Obelas ELA trial feedback (K1–K5) and convert to a quotation.",
+     "since": "2026-08-04",
+     "owner": "Ahmed"
     }
    ]
   },
@@ -271,21 +380,37 @@
    ],
    "status": "Confirmed – pending payment",
    "value": null,
-   "products": "Science K-8 + Alpha Math KG (McGraw Hill / Savvas / Alpha).",
-   "docs": "—",
-   "notes": "Order confirmed — awaiting down payment.",
-   "updatedAt": "2026-07-12T14:17:25.879Z",
+   "products": "Science K-8 + Alpha Math KG (McGraw Hill / Savvas / Alpha); Thomas' Calculus SI Units + MyLab Mathematics (15th ed.).",
+   "docs": "CDR000353 (no PO); earlier POs CDR000350, CDR000351, CDR000352",
+   "notes": "LONGEST-STALLED ACTIVE ACCOUNT — flag for follow-up. Quotation CDR000353 issued 2026-07-21 (40 copies, Thomas' Calculus SI Units + MyLab Mathematics w/ Pearson eText, 15th ed. and related). Down payment STILL PENDING as of 08-04, no movement since — roughly three weeks stalled. Folder holds POs CDR000350/351/352 (earlier orders); CDR000353 has NO PO yet. Order value not stated in correspondence — left unknown. Contacts seen in correspondence: Mrs. Rasha (librarian, chased on the down payment 07-08), Mrs. Ghaitha (academic director, girls' section — asked about Obelas samples 06-29).",
+   "updatedAt": "2026-08-11T14:04:15.000Z",
    "orders": [
     {
      "id": "cedar-o1",
-     "date": "2026-07",
-     "ref": "",
-     "title": "Science K-8 + Alpha Math KG (McGraw Hill / Savvas / Alpha)",
-     "items": "",
+     "date": "2026-07-21",
+     "ref": "CDR000353",
+     "title": "Thomas' Calculus SI Units + MyLab Mathematics (15th ed.) and related",
+     "items": "40 copies",
      "value": null,
      "status": "Confirmed – pending payment",
-     "docs": "",
-     "notes": "Order confirmed — awaiting down payment."
+     "kind": "main",
+     "state": "issued",
+     "docs": "CDR000353 (no PO on file)",
+     "notes": "Issued 2026-07-21. Down payment still pending as of 2026-08-04, no movement since. No PO for this quotation. Value not stated — unknown."
+    }
+   ],
+   "aliases": [
+    "Cedar International School",
+    "CIS"
+   ],
+   "folderName": "Cedar International School",
+   "lastUpdate": "2026-07-21",
+   "lastUpdateChannel": "email",
+   "openActions": [
+    {
+     "text": "Down payment still pending on CDR000353 — longest-stalled active account, chase Mrs. Rasha / Mrs. Ghaitha.",
+     "since": "2026-07-21",
+     "owner": "Ahmed"
     }
    ]
   },
@@ -353,21 +478,72 @@
    ],
    "status": "Approved – PO collected",
    "value": null,
-   "products": "Savvas 1-12 + Alpha Literature. Orders: Complete Coursebook (G1,3,6,8,11), MyView ELA, OBE ELA.",
-   "docs": "3 order files: Complete Coursebook, MyView, OBE ELA",
-   "notes": "In progress — quotation stage. Multiple order files prepared across programs.",
-   "updatedAt": "2026-07-23T08:46:20.442Z",
+   "products": "Savvas 1-12 + Alpha Literature. Complete Coursebook, MyView ELA, OBE ELA, HE titles.",
+   "docs": "Durat Al Sharq PO.pdf; payment PDF (50,000 down payment); DRT000042/43/45",
+   "notes": "In fulfilment, onboarding started. Down payment 50,000 SAR confirmed and reconciled by Perfect Purity Finance (Amer Nael), payment dated 2026-07-29. Quotations: main DRT000042 CANCELLED and split in two (per Info's WhatsApp approval 08-04); plus DRT000043 (HE titles) and DRT000045 (Our Literacy) — confirmed 08-04. Fulfilment: SO CEDC-SO-000001109; PL CEDC-004676 fully picked 08-06 (one title short 1 pc from Dubai stock); DN CEDC-DNN-000002105. Onboarding: Obelas issued an official ADMIN DIGITAL ACCOUNT (curriculum / lesson-planning access) 2026-08-03/04 at Tarek's request. OBELAS RETURN BLOCKED: collect myView all grade levels (contact Abdulrahman, principal) but PO DRT000045 contains no Obelas titles. NOTE: the 08-04 'delivered to the school, signed document' email on this account is under a CEDC-SAM-223 reference — that is a SAMPLE delivery, NOT the order. Do not mark delivered. Order values not stated in correspondence — left unknown.",
+   "updatedAt": "2026-08-11T14:04:15.000Z",
    "orders": [
     {
      "id": "durat-o1",
      "date": "2026-07",
-     "ref": "3 order files",
-     "title": "Savvas 1-12 + Alpha Literature",
+     "ref": "DRT000042",
+     "title": "Main order — Savvas 1-12 + Alpha Literature",
      "items": "Complete Coursebook (G1,3,6,8,11), MyView ELA, OBE ELA",
      "value": null,
-     "status": "Quotation sent",
-     "docs": "Complete Coursebook, MyView, OBE ELA order files",
-     "notes": "Quotation stage — multiple order files prepared."
+     "status": "Canceled / Declined",
+     "kind": "main",
+     "state": "cancelled",
+     "docs": "Durat Al Sharq PO.pdf",
+     "notes": "Main quotation cancelled and split into two new quotations per Info's WhatsApp approval, 2026-08-04."
+    },
+    {
+     "id": "durat-o2",
+     "date": "2026-08-04",
+     "ref": "DRT000043",
+     "title": "HE titles",
+     "items": "",
+     "value": null,
+     "status": "Approved – PO collected",
+     "kind": "split",
+     "state": "confirmed",
+     "docs": "",
+     "notes": "Confirmed 2026-08-04 as part of the DRT000042 split."
+    },
+    {
+     "id": "durat-o3",
+     "date": "2026-08-04",
+     "ref": "DRT000045",
+     "title": "Our Literacy",
+     "items": "",
+     "value": null,
+     "status": "Approved – PO collected",
+     "kind": "split",
+     "state": "confirmed",
+     "docs": "",
+     "notes": "Confirmed 2026-08-04. Blocks the Obelas return: contains no Obelas titles, so the equivalent Savvas titles cannot be collected under Ali Darweesh's rule."
+    }
+   ],
+   "aliases": [
+    "Durat AlSharq",
+    "Durat Al-sharq International School",
+    "Durat Al Sharq Intl' School-JED",
+    "DASIS"
+   ],
+   "folderName": "Durat AlSharq International School",
+   "lastUpdate": "2026-08-06",
+   "lastUpdateChannel": "whatsapp",
+   "obelasReplacement": {
+    "requested": true,
+    "titles": "myView, all grade levels",
+    "schoolContact": "Abdulrahman (principal)",
+    "state": "blocked",
+    "blocker": "PO DRT000045 contains no Obelas titles."
+   },
+   "openActions": [
+    {
+     "text": "Obelas return blocked — PO DRT000045 has no Obelas titles; awaiting the school's collection list (asked on WhatsApp).",
+     "since": "2026-08-04",
+     "owner": "Ahmed"
     }
    ]
   },
@@ -434,22 +610,78 @@
     }
    ],
    "status": "Approved – PO collected",
-   "value": 279646,
+   "value": 279646.05,
    "products": "K-8 all Savvas & Alpha. 658 titles ordered.",
-   "docs": "Booklist 2026 (658 items); PO 2026-27 on file",
-   "notes": "Order placed (658 items), PO received — with school for final approval.",
-   "updatedAt": "2026-07-15T14:00:19.649Z",
+   "docs": "PO GGI000040-2; Booklist 2026 (658 items)",
+   "notes": "In fulfilment. Main order 279,646.05 SAR, PO GGI000040-2. Down payment 50,000 SAR paid 2026-07-09; balance due on delivery. Obelas replacement quotation GGI000042 (26,850.56 SAR) still awaiting a customer PO as of 08-04. NEW 2026-08-11: fresh quotation request submitted to CS for additional Obelas ELA titles (K1/K2 WB, 20 copies each) priced on the same policy as the main order — under price approval, ticket CEDC-0826-00000015 open. Fulfilment: SO CEDC-SO-000001099; PL CEDC-004672 fully picked 08-06 and CEDC-004725 issued 08-11 — both flagged as containing titles with incomplete stickering/modification. Samples CEDC-SAM-238 delivered 08-05 (DNs 2051, 2052; PLs CEDC-004601, CEDC-004611) — samples, not the order. OBELAS RETURN BLOCKED: collect Alpha Reading K1 + myView all grades (contact Shurowq, school accountant) but GGI000042 has no PO and no ELA titles.",
+   "updatedAt": "2026-08-11T14:04:15.000Z",
    "orders": [
     {
      "id": "greengrass-o1",
      "date": "2026-06",
-     "ref": "PO 2026-27",
+     "ref": "GGI000040-2",
      "title": "K-8 all Savvas & Alpha",
      "items": "658 titles",
      "value": 279646.05,
      "status": "Approved – PO collected",
-     "docs": "Booklist 2026 (658 items); PO 2026-27 on file",
-     "notes": "PO received — with school for final approval."
+     "kind": "main",
+     "state": "po_received",
+     "docs": "PO GGI000040-2; Booklist 2026 (658 items)",
+     "notes": "Down payment 50,000 SAR paid 2026-07-09; balance due on delivery. SO CEDC-SO-000001099; PL CEDC-004672 fully picked 08-06, PL CEDC-004725 issued 08-11. Both picking lists flagged: titles with incomplete stickering/modification."
+    },
+    {
+     "id": "greengrass-o2",
+     "date": "2026-07",
+     "ref": "GGI000042",
+     "title": "Obelas replacement (NCC compliance)",
+     "items": "",
+     "value": 26850.56,
+     "status": "Quotation sent",
+     "kind": "obelas_replacement",
+     "state": "issued",
+     "docs": "",
+     "notes": "26,850.56 SAR — still awaiting a customer PO as of 2026-08-04. Blocks the Obelas return (no PO, no ELA titles)."
+    },
+    {
+     "id": "greengrass-o3",
+     "date": "2026-08-11",
+     "ref": "Pending (ticket CEDC-0826-00000015)",
+     "title": "Additional Obelas ELA titles — K1/K2 workbooks",
+     "items": "Obelas ELA K1 WB 20 copies; Obelas ELA K2 WB 20 copies",
+     "value": null,
+     "status": "Under approval",
+     "kind": "backorder",
+     "state": "draft",
+     "docs": "",
+     "notes": "Requested 2026-08-11 at main-order pricing policy. CS confirmed the request is under price approval; not yet quoted."
+    }
+   ],
+   "aliases": [
+    "Green Grass Intl' School-JED",
+    "Green Grass International School",
+    "Green Grass Intl’ Schools",
+    "GGIS"
+   ],
+   "folderName": "Green Grass International School",
+   "lastUpdate": "2026-08-11",
+   "lastUpdateChannel": "email",
+   "obelasReplacement": {
+    "requested": true,
+    "titles": "Alpha Reading K1 + myView, all grades",
+    "schoolContact": "Shurowq (school accountant)",
+    "state": "blocked",
+    "blocker": "Quotation GGI000042 has no PO and contains no ELA titles."
+   },
+   "openActions": [
+    {
+     "text": "Chase the customer PO for Obelas replacement quotation GGI000042.",
+     "since": "2026-08-04",
+     "owner": "Ahmed"
+    },
+    {
+     "text": "Follow up the 08-11 Obelas ELA K1/K2 quotation request — under price approval (ticket CEDC-0826-00000015).",
+     "since": "2026-08-11",
+     "owner": "CS"
     }
    ]
   },
@@ -496,22 +728,76 @@
     }
    ],
    "status": "Approved – PO collected",
-   "value": 174700.53,
+   "value": 257642.27,
    "products": "1-8 Savvas (Elevate Science, MyView), Obelas & Alpha. 764 titles.",
-   "docs": "Booklist (Savvas); quotation GPS000008-4 (06/07/2026)",
-   "notes": "Quotation GPS000008 sent — 764 items, 174,700.53 SAR incl. VAT.",
-   "updatedAt": "2026-07-13T12:45:50.236Z",
+   "docs": "PO. GPS000008; Booklist (Savvas); promissory note (98,263.56)",
+   "notes": "Confirmed and in fulfilment; backorder also confirmed. Main order 257,642.27 SAR, quotation GPS000008 — split into two per Info's WhatsApp approval; school opted to KEEP MY VIEW LITERACY AT ITS OWN RESPONSIBILITY, confirmed in writing by Ahmed 07-29. PREVIOUS TRACKER VALUE 174,700.53 WAS STALE. Advance 87,350 SAR received. Promissory note originally 87,350 due 2026-10-30 (customer: Hajar Osama Mohammed Halawani) — AMOUNT UPDATED TO 98,263.56 on 2026-08-06, Ali approved, Finance issued, awaiting customer signature. Backorder GPS000011 (Grade 1 titles, 10 copies) confirmed 2026-08-10 except My View, with 50% advance received 08-09; one title cancelled (Envision Math 2020 Additional Practice WB Gr.1 — CS unable to supply). Obelas replacement quotation GPS000010 (39,819.10) awaiting customer PO as of 08-04. School owner is currently outside the Kingdom; official PO to follow on her return (Tarek, 08-06). Fulfilment: SO CEDC-SO-000001087; PLs CEDC-004659 (fully picked 08-06) and CEDC-004721 (08-11).",
+   "updatedAt": "2026-08-11T14:04:15.000Z",
    "orders": [
     {
      "id": "greenpeaks-o1",
      "date": "2026-07-13",
-     "ref": "GPS000008-5",
+     "ref": "GPS000008",
      "title": "G1-8 Savvas (Elevate Science, MyView), Obelas & Alpha",
      "items": "764 titles",
-     "value": 174700.53,
+     "value": 257642.27,
      "status": "Approved – PO collected",
-     "docs": "Booklist (Savvas); quotation GPS000008-4",
-     "notes": "174,700.53 SAR incl. VAT.\n\nDown payment - 87,350"
+     "kind": "main",
+     "state": "po_received",
+     "supersedes": "GPS000008 (rev. 174,700.53)",
+     "docs": "PO. GPS000008; Booklist (Savvas)",
+     "notes": "257,642.27 SAR. Split into two per Info's WhatsApp approval; school keeps My View Literacy at its own responsibility (confirmed in writing 07-29). Advance 87,350 SAR received. Promissory note updated from 87,350 to 98,263.56 on 2026-08-06 (customer Hajar Osama Mohammed Halawani) — Ali approved, Finance issued, awaiting customer signature. SO CEDC-SO-000001087; PLs CEDC-004659, CEDC-004721."
+    },
+    {
+     "id": "greenpeaks-o2",
+     "date": "2026-08-10",
+     "ref": "GPS000011",
+     "title": "Backorder — Grade 1 titles",
+     "items": "Grade 1 titles, 10 copies each",
+     "value": null,
+     "status": "Approved – PO collected",
+     "kind": "backorder",
+     "state": "confirmed",
+     "docs": "",
+     "notes": "Requested 07-30, confirmed 2026-08-10 (except My View, same split pattern) against a 50% advance payment received 08-09. One title cancelled: Envision Math 2020 Additional Practice WB Gr.1 — CS unable to supply. School owner outside the Kingdom; official PO to follow on her return."
+    },
+    {
+     "id": "greenpeaks-o3",
+     "date": "2026-07",
+     "ref": "GPS000010",
+     "title": "Obelas replacement (NCC compliance)",
+     "items": "",
+     "value": 39819.1,
+     "status": "Quotation sent",
+     "kind": "obelas_replacement",
+     "state": "issued",
+     "docs": "",
+     "notes": "39,819.10 SAR — awaiting customer PO as of 2026-08-04."
+    }
+   ],
+   "aliases": [
+    "Green Peaks Intl' School -JED",
+    "Green Peaks International School",
+    "GPIS"
+   ],
+   "folderName": "Green Peaks International School",
+   "lastUpdate": "2026-08-10",
+   "lastUpdateChannel": "email",
+   "openActions": [
+    {
+     "text": "Obtain the customer signature on the revised 98,263.56 promissory note.",
+     "since": "2026-08-06",
+     "owner": "Ahmed"
+    },
+    {
+     "text": "Collect the official PO on the owner's return to the Kingdom.",
+     "since": "2026-08-06",
+     "owner": "Ahmed"
+    },
+    {
+     "text": "Chase the customer PO for Obelas replacement quotation GPS000010.",
+     "since": "2026-08-04",
+     "owner": "Ahmed"
     }
    ]
   },
@@ -581,8 +867,8 @@
    "value": null,
    "products": "Alpha Literature 6-12.",
    "docs": "—",
-   "notes": "Demo sent for Alpha Literature 6-12.",
-   "updatedAt": null,
+   "notes": "NOT ONE OF THE 16 KEY ACCOUNTS — flagged in the 2026-08-11 handoff as a real prospect rather than a key account (it appears in the NCC/Obelas proposal as 'Jeddah World Academy'). Marked prospect: true rather than deleted, pending a decision on whether to move it to a separate prospects list. Demo sent for Alpha Literature 6-12; no new activity in the 2026-07-10 → 08-11 window.",
+   "updatedAt": "2026-08-11T14:04:15.000Z",
    "orders": [
     {
      "id": "jeddah-o1",
@@ -595,7 +881,15 @@
      "docs": "",
      "notes": "Demo sent for Alpha Literature 6-12."
     }
-   ]
+   ],
+   "prospect": true,
+   "aliases": [
+    "Jeddah International School",
+    "Jeddah World Academy",
+    "JIS"
+   ],
+   "lastUpdate": "2026-06",
+   "lastUpdateChannel": "email"
   },
   {
    "id": "qurtubah",
@@ -642,20 +936,76 @@
    "status": "Approved – PO collected",
    "value": 1463584.71,
    "products": "K-12 English, Math, Science — Savvas & Alpha. 205 titles across 11 quotations.",
-   "docs": "11 POs (QTR000045–56); quotation QRT000056; payment plan (advance + 3 installments to 30-12-2026); bank statement; cheques 2026",
-   "notes": "Largest account. PO collected & approved. 4-installment payment schedule agreed (~351,902 SAR each).",
-   "updatedAt": null,
+   "docs": "11 PO PDFs (QTR000045–56; QTR000052 not on file); QRT000056.pdf; payment plan (advance + 3 installments to 2026-12-30); bank statement; Cheques 2026.pdf; Qurtubah payment 2026.xlsx",
+   "notes": "Largest account, in fulfilment. 4-installment plan ~351,902 SAR each to 2026-12-30; delivery deadline 2026-08-25. MAJOR CHANGE 2026-08-09/10: school decided to STAY WITH SAVVAS and not switch to Obelas — Obelas replacement track closed (QRT000061/62/63/64, 375,369.20, cancelled). Additional titles moved to new quotation QRT000067 (from QRT000050), SO CEDC-SO-000001116, available stock issued 08-11. DATA GAP: QTR000052 missing from the PO folder while 045–056 are otherwise present — numbering gap or missing document, worth surfacing. Next action: order in final dispatch preparation; Ahmed asked Tarek whether to arrange delivery with the school directly.",
+   "updatedAt": "2026-08-11T14:04:15.000Z",
    "orders": [
     {
      "id": "qurtubah-o1",
      "date": "2026-06",
-     "ref": "QTR000045–56",
+     "ref": "QTR000045–56 / QRT000056",
      "title": "K-12 English, Math & Science — Savvas & Alpha",
      "items": "205 titles across 11 quotations",
      "value": 1463584.71,
      "status": "Approved – PO collected",
-     "docs": "11 POs; quotation QRT000056; payment plan (advance + 3 installments to 30-12-2026); bank statement; cheques 2026",
-     "notes": "4-installment schedule agreed (~351,902 SAR each)."
+     "kind": "main",
+     "state": "po_received",
+     "docs": "11 PO PDFs (QTR000052 not on file); QRT000056.pdf; payment plan; bank statement; Cheques 2026.pdf",
+     "notes": "4-installment plan ~351,902 SAR each to 2026-12-30. Delivery deadline 2026-08-25. In fulfilment: SOs CEDC-SO-000001088–1093, 1112, 1113; picking lists CEDC-004621, 004661, 004663, 004670, 004672, 004681–004683, 004722, 004724; delivery notes CEDC-DNN-000002079, 2080, 2095, 2096."
+    },
+    {
+     "id": "qurtubah-o2",
+     "date": "2026-08",
+     "ref": "QRT000061 / 62 / 63 / 64",
+     "title": "Obelas replacement (NCC compliance)",
+     "items": "",
+     "value": 375369.2,
+     "status": "Canceled / Declined",
+     "kind": "obelas_replacement",
+     "state": "cancelled",
+     "docs": "",
+     "notes": "Combined 375,369.20 SAR, was awaiting customer PO as of 08-04. School decided 2026-08-09 to stay with Savvas — NOT proceeding. Supersedes the 08-03 split (main quotation cancelled, split into confirmed QRT000051 + an Obelas-replacement quotation), which is itself now superseded."
+    },
+    {
+     "id": "qurtubah-o3",
+     "date": "2026-08-11",
+     "ref": "QRT000067",
+     "title": "Additional titles requested by school",
+     "items": "",
+     "value": null,
+     "status": "Approved – PO collected",
+     "kind": "split",
+     "state": "confirmed",
+     "docs": "",
+     "notes": "Additional titles moved from org. quotation QRT000050 per management approval. SO CEDC-SO-000001116; available stock already issued 08-11. MY VIEW LITERACY titles held (not swapped to Obelas) per 08-05 approval."
+    }
+   ],
+   "aliases": [
+    "Qurtubah Intl’ Schools-Jed",
+    "Qurtubah International School",
+    "Qurtubah Intl' Schools-Jed (GIRLS)",
+    "Qurtubah Intl' Schools-Jed (KG)"
+   ],
+   "folderName": "Qurtubah International School",
+   "lastUpdate": "2026-08-11",
+   "lastUpdateChannel": "email",
+   "obelasReplacement": {
+    "requested": true,
+    "titles": "Proposed full switch",
+    "schoolContact": "Mr. Ikramy",
+    "state": "declined",
+    "blocker": "School declined 2026-08-09 — staying with Savvas."
+   },
+   "openActions": [
+    {
+     "text": "Confirm with Tarek whether Ahmed arranges delivery with the school directly; dispatch by the 2026-08-25 deadline.",
+     "since": "2026-08-11",
+     "owner": "Ahmed"
+    },
+    {
+     "text": "Resolve missing PO QTR000052 — numbering gap or missing document.",
+     "since": "2026-08-04",
+     "owner": "Ahmed"
     }
    ]
   },
@@ -732,22 +1082,61 @@
     }
    ],
    "status": "Approved – PO collected",
-   "value": null,
-   "products": "K-12 English, Math, Science.",
-   "docs": "—",
-   "notes": "Approved - Waiting payment confirmation.",
-   "updatedAt": "2026-07-28T14:01:46.537Z",
+   "value": 1353134.97,
+   "products": "K-12 English, Math, Science — Obelas replacement programme.",
+   "docs": "PO. SRQ001982; PO. SRQ001978; Shurooq al Mamlka PN 3 Pns.pdf; UPS waybill (08-10); sample DN CEDC-DNN-000002108",
+   "notes": "PO NOW RECEIVED (2026-08-09) — this was the biggest open gap on 08-04. Obelas replacement quotation SRQ001982, 1,353,134.97 SAR incl. an extra 10% discount; CS confirmed 08-10 (SO CEDC-SO-000001114), pending stock availability for picking. Payment: 3 promissory notes approved 2026-07-14. FOC replacement in progress: upper-grade science Gr.9–12 (EXPERIENCE CHEMISTRY, EXPERIENCE PHYSICS, BIOLOGY) replaced free of charge for Savvas equivalents — blocked on collecting the old Savvas returns first; Naqel pickup booked 08-10, Taif delivery address given to warehouse. Site is TAIF, not Jeddah — matters for logistics. Origin of the Obelas push was a direct proposal from Miss Marjery (academic supervisor).",
+   "updatedAt": "2026-08-11T14:04:15.000Z",
    "orders": [
     {
      "id": "shrook-o1",
-     "date": "2026-06",
-     "ref": "",
-     "title": "K-12 English, Math & Science",
+     "date": "2026-08-09",
+     "ref": "SRQ001982",
+     "title": "Obelas replacement — K-12 English, Math & Science",
+     "items": "",
+     "value": 1353134.97,
+     "status": "Approved – PO collected",
+     "kind": "obelas_replacement",
+     "state": "po_received",
+     "docs": "PO. SRQ001982; PO. SRQ001978; Shurooq al Mamlka PN 3 Pns.pdf",
+     "notes": "1,353,134.97 SAR incl. extra 10% discount. Customer PO received 2026-08-09; confirmed by CS 08-10, SO CEDC-SO-000001114, pending stock for picking. 3 promissory notes approved 2026-07-14."
+    },
+    {
+     "id": "shrook-o2",
+     "date": "2026-08-09",
+     "ref": "FOC replacement",
+     "title": "Gr.9–12 science FOC swap (Obelas for Savvas)",
      "items": "",
      "value": null,
-     "status": "Approved – PO collected",
+     "status": "Pending follow-up",
+     "kind": "foc_replacement",
+     "state": "in_progress",
      "docs": "",
-     "notes": "Approved — waiting payment confirmation."
+     "notes": "EXPERIENCE CHEMISTRY, EXPERIENCE PHYSICS, BIOLOGY supplied free of charge to existing students. BLOCKED on collecting the Savvas returns first — warehouse could not reach the school contact; Naqel pickup booked 08-10. Samples CEDC-SAMPLE-00000239 processed 08-10 (DN CEDC-DNN-000002108 / PL CEDC-004691 to Taif); UPS shipment to school 08-10. New PP warehouse stock PPSA-DN-000016788 received 08-10 (warehouse only, not a school delivery)."
+    }
+   ],
+   "aliases": [
+    "Shurouq AlMamlaka",
+    "Shurooq Al-Mamlaka International School",
+    "SHUROOQ AL MAMLKA INT'L - TAIF",
+    "Shorouq Al Mamlakah",
+    "SAMIS"
+   ],
+   "folderName": "Shurouq AlMamlaka International School",
+   "lastUpdate": "2026-08-10",
+   "lastUpdateChannel": "email",
+   "obelasReplacement": {
+    "requested": true,
+    "titles": "myView, MS/HS Math & Science; + FOC Gr.9–12 science swap",
+    "schoolContact": "Dr. Siraj Alharthi (director)",
+    "state": "in_progress",
+    "blocker": "FOC swap awaiting collection of the Savvas returns."
+   },
+   "openActions": [
+    {
+     "text": "Collect the Savvas returns so the FOC Gr.9–12 science replacement can ship (Naqel pickup booked 08-10).",
+     "since": "2026-08-09",
+     "owner": "Warehouse"
     }
    ]
   },
@@ -797,8 +1186,8 @@
    "value": null,
    "products": "IG / Cambridge.",
    "docs": "KAIS Book Order 2026-27 (with ISBN) v8",
-   "notes": "Request for quotation declined. Cambridge curriculum.",
-   "updatedAt": null,
+   "notes": "Closed, no action. Declined 2026-06-25 — no NCC approval for the Cambridge curriculum. No activity since. Folder holds the booklist only.",
+   "updatedAt": "2026-08-11T14:04:15.000Z",
    "orders": [
     {
      "id": "kenz-o1",
@@ -808,10 +1197,20 @@
      "items": "",
      "value": null,
      "status": "Canceled / Declined",
-     "docs": "KAIS Book Order 2026-27 (with ISBN) v8",
-     "notes": "Request for quotation declined."
+     "kind": "main",
+     "state": "cancelled",
+     "docs": "KAIS BOOK ORDER 2026-27 (WITH ISBN) v8.xlsx",
+     "notes": "Request for quotation declined 2026-06-25 — no NCC approval for Cambridge."
     }
-   ]
+   ],
+   "aliases": [
+    "Kenz International School",
+    "KAIS",
+    "KIS"
+   ],
+   "folderName": "Kenz International School",
+   "lastUpdate": "2026-06-25",
+   "lastUpdateChannel": "email"
   },
   {
    "id": "maali",
@@ -858,20 +1257,44 @@
    "status": "Approved – PO collected",
    "value": null,
    "products": "Obelas K1–K3.",
-   "docs": "—",
-   "notes": "Approved - Waiting payment confirmation.",
-   "updatedAt": "2026-07-12T14:19:50.536Z",
+   "docs": "PO MAL000002",
+   "notes": "PO collected, payment still outstanding. PO MAL000002 on file; Tarek forwarded PO copies for Maali (and Shurouq) on 2026-08-09. DOCUMENTATION GAP: as of 08-04 Ahmed had NO QUOTATION on record for this account in his own correspondence — worth reconciling. Order value unknown — left blank rather than guessed. Site is TAIF. Warehouse-only stock movements, NONE of which are school deliveries: CEDC-004441; PPSA-DN-000016264 (07-29); PPSA-DN-000016392 / PL CEDC-004582 / DN CEDC-DNN-000002038 / SO CEDC-SO-000001068 (07-30).",
+   "updatedAt": "2026-08-11T14:04:15.000Z",
    "orders": [
     {
      "id": "maali-o1",
      "date": "2026-06",
-     "ref": "",
+     "ref": "MAL000002",
      "title": "Obelas K1–K3",
      "items": "",
      "value": null,
      "status": "Approved – PO collected",
-     "docs": "",
-     "notes": "Approved — waiting payment confirmation."
+     "kind": "main",
+     "state": "po_received",
+     "docs": "PO MAL000002",
+     "notes": "PO on file, forwarded by Tarek 2026-08-09. Payment outstanding. No quotation on record in Ahmed's correspondence as of 08-04 — documentation gap. Value unknown."
+    }
+   ],
+   "aliases": [
+    "Maali Creative",
+    "Maali Creative International School",
+    "AL MAALI CREATIVE EDUCATION COMPANY- TAIF",
+    "AL MAALI - TAIF",
+    "MCIS"
+   ],
+   "folderName": "Maali Creative International School",
+   "lastUpdate": "2026-08-09",
+   "lastUpdateChannel": "file",
+   "openActions": [
+    {
+     "text": "Reconcile the documentation gap — PO MAL000002 exists but no quotation is on record.",
+     "since": "2026-08-04",
+     "owner": "Ahmed"
+    },
+    {
+     "text": "Payment still outstanding.",
+     "since": "2026-08-09",
+     "owner": "Ahmed"
     }
    ]
   },
@@ -907,25 +1330,37 @@
      "notes": ""
     }
    ],
-   "status": "Quotation sent",
+   "status": "Delivered / Done",
    "value": null,
    "products": "Alpha KG.",
-   "docs": "—",
-   "notes": "Interested in Alpha KG — pending follow-up.",
-   "updatedAt": "2026-07-21T12:47:10.634Z",
+   "docs": "BMN000011; 5 signed DN PDFs in Blue Moon Daycare/DNs/2026-27/; invoice CEDC-CINV-000001835",
+   "notes": "DELIVERED AND FULLY INVOICED — the first and only account that meets the delivery bar (explicit school-side signed delivery notes under a Sales Order reference). Quotation BMN000011 confirmed per Info WhatsApp; SO CEDC-SO-000001104. Delivered to the school with signed delivery notes 2026-08-09/10: CEDC-DNN-000002040, 2041, 2043, 2044, 2083 (picking lists CEDC-004577, 004578, 004591, 004592, 004675) — all five DN PDFs on file. Fully invoiced CEDC-CINV-000001835; ServiceHub ticket CEDC-0726-00000029 closed 2026-08-10 with resolution 'Fully Invoiced'. Down payment 24,563.23 confirmed by Finance 2026-07-27. TOTAL ORDER VALUE WAS NEVER STATED in correspondence — left unknown rather than guessed. Earlier dispute over supplying ALPHA MATH WB / ALPHA READING (no MOE approval) resolved per management WhatsApp approval.",
+   "updatedAt": "2026-08-11T14:04:15.000Z",
    "orders": [
     {
      "id": "bluemoon-o1",
-     "date": "2026-06",
-     "ref": "",
+     "date": "2026-08-10",
+     "ref": "BMN000011",
      "title": "Alpha KG",
      "items": "",
      "value": null,
-     "status": "Pending follow-up",
-     "docs": "",
-     "notes": "Interested in Alpha KG — pending follow-up."
+     "status": "Delivered / Done",
+     "kind": "main",
+     "state": "invoiced",
+     "docs": "5 signed DNs (2026-27); invoice CEDC-CINV-000001835",
+     "notes": "Confirmed per Info WhatsApp. SO CEDC-SO-000001104. Delivered to school with signed DNs 2026-08-09/10: CEDC-DNN-000002040, 2041, 2043, 2044, 2083 (PLs CEDC-004577, 004578, 004591, 004592, 004675). Fully invoiced CEDC-CINV-000001835; ticket CEDC-0726-00000029 closed 08-10. Down payment 24,563.23 confirmed 2026-07-27. Total value never stated — unknown."
     }
-   ]
+   ],
+   "aliases": [
+    "Blue Moon Daycare",
+    "Blue moon Daycare",
+    "BLUE MOON CARE CENTER JEDDAH",
+    "Blu Moon care -jed",
+    "BMDC"
+   ],
+   "folderName": "Blue Moon Daycare",
+   "lastUpdate": "2026-08-10",
+   "lastUpdateChannel": "email"
   },
   {
    "id": "alnassr",
@@ -950,23 +1385,40 @@
    "contacts": [],
    "status": "Canceled / Declined",
    "value": null,
-   "products": "Go for English (2026-2027).",
-   "docs": "Go for English books order/request 2026-2027",
-   "notes": "Quotation requested for Go for English — quotation sent.",
-   "updatedAt": "2026-08-04T14:23:51.910Z",
+   "products": "Go for English (2026-2027) — Alpha ELT.",
+   "docs": "Go for English Books Order 2026-2027.pdf",
+   "notes": "CANNOT SUPPLY — a hard blocker, materially different from a customer who simply declined. Recorded under 'Canceled / Declined' only because that is the status the tool groups as lost; see statusDetail. Quotation NSR000007 issued 2026-06-29, no reply since. 2026-08-04, Ali Darweesh: 'We cannot supply Al Nasser. They use Alpha ELT, and the approvals for the books in question are expired.' Ahmed has NO contact details and no files for this account beyond Go for English Books Order 2026-2027.pdf; he asked Tarek for the contact person, quotation and order documents and received nothing.",
+   "updatedAt": "2026-08-11T14:04:15.000Z",
    "orders": [
     {
      "id": "alnassr-o1",
-     "date": "2026-06",
-     "ref": "",
+     "date": "2026-06-29",
+     "ref": "NSR000007",
      "title": "Go for English (2026-2027)",
      "items": "",
      "value": null,
-     "status": "Quotation sent",
-     "docs": "Go for English books order/request 2026-2027",
-     "notes": "Quotation sent."
+     "status": "Canceled / Declined",
+     "kind": "main",
+     "state": "cancelled",
+     "docs": "Go for English Books Order 2026-2027.pdf",
+     "notes": "Issued 2026-06-29, no reply. Blocked 2026-08-04: school uses Alpha ELT and the approvals for the titles in question are expired."
     }
-   ]
+   ],
+   "aliases": [
+    "Al Nassr Private School",
+    "Al Nasser"
+   ],
+   "folderName": "Al Nassr Private School",
+   "lastUpdate": "2026-08-04",
+   "lastUpdateChannel": "email",
+   "openActions": [
+    {
+     "text": "Obtain contact person and order documents from Tarek (requested, nothing received) — account otherwise unsupplyable.",
+     "since": "2026-08-04",
+     "owner": "Tarek"
+    }
+   ],
+   "statusDetail": "Cannot supply — expired approvals"
   },
   {
    "id": "alkawthar",
@@ -989,12 +1441,12 @@
    "tuition": "",
    "curriculum": "",
    "contacts": [],
-   "status": "Quotation sent",
+   "status": "Pending follow-up",
    "value": null,
-   "products": "English book order (93 titles).",
-   "docs": "English Book Order booklist",
-   "notes": "English booklist received — not yet quoted. Needs contact details & quotation.",
-   "updatedAt": "2026-07-29T14:06:59.993Z",
+   "products": "English book order (93 titles) — Cambridge and Oxford titles.",
+   "docs": "ENGLISH BOOK ORDER.xlsx (only document on file)",
+   "notes": "ON HOLD, awaiting school contact — recorded as 'Pending follow-up' (the tool's nearest status); see statusDetail. Corrected from 'Booklist received'. 2026-07-12: CS confirmed (per Info, WhatsApp) that the requested Cambridge and Oxford titles CANNOT BE QUOTED (93 titles). 2026-08-10: a quotation request went back to CS and was 'under price approval' awaiting Mr. Ali's pricing — then AHMED ASKED CS TO HOLD IT UNTIL FURTHER NOTICE while he tries to reach the school. Deal stalled / at risk. Only document on file is the booklist.",
+   "updatedAt": "2026-08-11T14:04:15.000Z",
    "orders": [
     {
      "id": "alkawthar-o1",
@@ -1003,11 +1455,28 @@
      "title": "English book order",
      "items": "93 titles",
      "value": null,
-     "status": "Booklist received",
-     "docs": "English Book Order booklist",
-     "notes": "Booklist received — not yet quoted. Needs contact details & quotation."
+     "status": "Pending follow-up",
+     "kind": "main",
+     "state": "draft",
+     "docs": "ENGLISH BOOK ORDER.xlsx",
+     "notes": "07-12: CS confirmed the Cambridge and Oxford titles cannot be quoted. 08-10: request re-submitted, under price approval, then held by Ahmed until further notice pending school contact."
     }
-   ]
+   ],
+   "aliases": [
+    "AlKawthar International School",
+    "Al-Kawthar International School"
+   ],
+   "folderName": "AlKawthar International School",
+   "lastUpdate": "2026-08-10",
+   "lastUpdateChannel": "email",
+   "openActions": [
+    {
+     "text": "Re-establish contact with the school, then release the held quotation.",
+     "since": "2026-08-10",
+     "owner": "Ahmed"
+    }
+   ],
+   "statusDetail": "On hold — awaiting school contact"
   },
   {
    "id": "bloom",
@@ -1039,25 +1508,53 @@
      "decisionMaker": false,
      "primary": false,
      "notes": ""
+    },
+    {
+     "name": "Mrs. Youmna",
+     "role": "Contact",
+     "email": "",
+     "mobile": "0558826218",
+     "whatsapp": "0558826218",
+     "primary": true,
+     "decisionMaker": true,
+     "notes": "Per Perfect Purity customer list, 2026-08-10. Account runs over WhatsApp."
     }
    ],
    "status": "Quotation sent",
-   "value": 92232.99,
+   "value": 88464.9,
    "products": "Alpha Books 2026-2027 (KG3).",
-   "docs": "Bloom - Alpha Books 2026-2027",
-   "notes": "Alpha KG3 booklist received — prepare quotation.",
-   "updatedAt": "2026-07-29T14:06:27.912Z",
+   "docs": "THIKRBOYSS-00005-2 (current); THIKRBOYSS-00005; THIKRBOYSS-00004 (superseded); proforma invoice; Bloom 2026.pdf PO",
+   "notes": "ACTIVE AND FAST-MOVING, RUN ENTIRELY OVER WHATSAPP — no email trail at all, so any 'days since last update' logic driven by email recency will permanently and wrongly flag this account as stalled. Value 88,464.90 SAR on quotation THIKRBOYSS-00005-2, which SUPERSEDES THIKRBOYSS-00004 (92,232.99) — THE PREVIOUS TRACKER VALUE OF 92,232.99 WAS THE SUPERSEDED VERSION. Folder holds all three versions. Proforma invoice and Bloom 2026.pdf PO on file. Next action: confirm the proforma was accepted and schedule the down payment.",
+   "updatedAt": "2026-08-11T14:04:15.000Z",
    "orders": [
     {
      "id": "bloom-o1",
      "date": "2026-07",
-     "ref": "",
+     "ref": "THIKRBOYSS-00005-2",
      "title": "Alpha Books 2026-2027 (KG3)",
      "items": "",
-     "value": 92232.99,
+     "value": 88464.9,
      "status": "Quotation sent",
-     "docs": "Bloom - Alpha Books 2026-2027",
-     "notes": "Quotation prepared — 92,232.99 SAR."
+     "kind": "main",
+     "state": "issued",
+     "supersedes": "THIKRBOYSS-00004 (92,232.99)",
+     "docs": "THIKRBOYSS-00005-2; proforma invoice; Bloom 2026.pdf PO",
+     "notes": "88,464.90 SAR — supersedes THIKRBOYSS-00004 (92,232.99) and THIKRBOYSS-00005. Proforma invoice and PO on file. Next: confirm proforma acceptance and schedule the down payment. All coordination via WhatsApp."
+    }
+   ],
+   "aliases": [
+    "Bloom",
+    "THIKR BOYS",
+    "Dar Al-Thikr (Bloom)"
+   ],
+   "folderName": "Bloom",
+   "lastUpdate": "2026-08-10",
+   "lastUpdateChannel": "whatsapp",
+   "openActions": [
+    {
+     "text": "Confirm the proforma was accepted and schedule the down payment.",
+     "since": "2026-08-10",
+     "owner": "Ahmed"
     }
    ]
   },
@@ -1081,11 +1578,54 @@
    "value": null,
    "products": "",
    "docs": "",
-   "notes": "",
+   "notes": "No activity in the 2026-07-10 → 2026-08-11 window and not covered by the 2026-08-11 Key Accounts handoff (which tracks 16 accounts, not including this one). Status left as recorded; confirm whether this account is still tracked.",
    "contacts": [],
    "id": "sidrah-knowledge-academy-ms2uqq1u",
    "orders": [],
-   "updatedAt": "2026-08-04T08:46:34.645Z"
+   "updatedAt": "2026-08-11T14:04:15.000Z"
+  },
+  {
+   "id": "hopemakers",
+   "code": "HMDC-JD",
+   "name": "Hope Makers Daycare",
+   "nameAr": "",
+   "aliases": [
+    "Hope Makers Daycare",
+    "Hope Makers"
+   ],
+   "folderName": "Hope Makers Daycare",
+   "city": "Jeddah",
+   "district": "",
+   "region": "Makkah",
+   "website": "",
+   "email": "",
+   "phone": "",
+   "whatsapp": "",
+   "address": "",
+   "mapsUrl": "",
+   "schoolType": "Daycare",
+   "genders": "",
+   "grades": "KG",
+   "gradeStages": "KG",
+   "tuition": "",
+   "curriculum": "",
+   "contacts": [],
+   "status": "Lead / new",
+   "value": null,
+   "products": "",
+   "docs": "2 PDFs on file",
+   "notes": "NEWLY ADDED from the 2026-08-11 handoff — this account has a folder and is tracked by Ahmed but had no record in the platform at all. No follow-up on record. Minimal activity: one WhatsApp image (2026-06-23) and two PDFs. No email correspondence, no booklist, no quotation. Needs a first proper status check.",
+   "lastUpdate": "2026-06-23",
+   "lastUpdateChannel": "whatsapp",
+   "orders": [],
+   "openActions": [
+    {
+     "text": "First proper status check — no follow-up on record.",
+     "since": "2026-06-23",
+     "owner": "Ahmed"
+    }
+   ],
+   "updatedAt": "2026-08-11T14:04:15.000Z"
   }
  ]
 }
