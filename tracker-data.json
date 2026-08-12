@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-08-11T14:04:15.000Z",
+ "savedAt": "2026-08-12T08:01:00.019Z",
  "schools": [
   {
    "id": "ajool",
@@ -1582,49 +1582,6 @@
    "contacts": [],
    "id": "sidrah-knowledge-academy-ms2uqq1u",
    "orders": [],
-   "updatedAt": "2026-08-11T14:04:15.000Z"
-  },
-  {
-   "id": "hopemakers",
-   "code": "HMDC-JD",
-   "name": "Hope Makers Daycare",
-   "nameAr": "",
-   "aliases": [
-    "Hope Makers Daycare",
-    "Hope Makers"
-   ],
-   "folderName": "Hope Makers Daycare",
-   "city": "Jeddah",
-   "district": "",
-   "region": "Makkah",
-   "website": "",
-   "email": "",
-   "phone": "",
-   "whatsapp": "",
-   "address": "",
-   "mapsUrl": "",
-   "schoolType": "Daycare",
-   "genders": "",
-   "grades": "KG",
-   "gradeStages": "KG",
-   "tuition": "",
-   "curriculum": "",
-   "contacts": [],
-   "status": "Lead / new",
-   "value": null,
-   "products": "",
-   "docs": "2 PDFs on file",
-   "notes": "NEWLY ADDED from the 2026-08-11 handoff — this account has a folder and is tracked by Ahmed but had no record in the platform at all. No follow-up on record. Minimal activity: one WhatsApp image (2026-06-23) and two PDFs. No email correspondence, no booklist, no quotation. Needs a first proper status check.",
-   "lastUpdate": "2026-06-23",
-   "lastUpdateChannel": "whatsapp",
-   "orders": [],
-   "openActions": [
-    {
-     "text": "First proper status check — no follow-up on record.",
-     "since": "2026-06-23",
-     "owner": "Ahmed"
-    }
-   ],
    "updatedAt": "2026-08-11T14:04:15.000Z"
   }
  ]
