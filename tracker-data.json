@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-08-12T08:01:00.019Z",
+ "savedAt": "2026-08-17T07:38:31.053Z",
  "schools": [
   {
    "id": "ajool",
@@ -1520,12 +1520,12 @@
      "notes": "Per Perfect Purity customer list, 2026-08-10. Account runs over WhatsApp."
     }
    ],
-   "status": "Quotation sent",
+   "status": "Delivered / Done",
    "value": 88464.9,
    "products": "Alpha Books 2026-2027 (KG3).",
    "docs": "THIKRBOYSS-00005-2 (current); THIKRBOYSS-00005; THIKRBOYSS-00004 (superseded); proforma invoice; Bloom 2026.pdf PO",
    "notes": "ACTIVE AND FAST-MOVING, RUN ENTIRELY OVER WHATSAPP — no email trail at all, so any 'days since last update' logic driven by email recency will permanently and wrongly flag this account as stalled. Value 88,464.90 SAR on quotation THIKRBOYSS-00005-2, which SUPERSEDES THIKRBOYSS-00004 (92,232.99) — THE PREVIOUS TRACKER VALUE OF 92,232.99 WAS THE SUPERSEDED VERSION. Folder holds all three versions. Proforma invoice and Bloom 2026.pdf PO on file. Next action: confirm the proforma was accepted and schedule the down payment.",
-   "updatedAt": "2026-08-11T14:04:15.000Z",
+   "updatedAt": "2026-08-17T07:38:29.842Z",
    "orders": [
     {
      "id": "bloom-o1",
