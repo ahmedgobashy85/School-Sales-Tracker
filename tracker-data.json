@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-09-20T15:25:56.924Z",
+ "savedAt": "2026-09-20T15:26:00.824Z",
  "schools": [
   {
    "id": "ajool",
@@ -1081,12 +1081,12 @@
      "notes": ""
     }
    ],
-   "status": "Approved – PO collected",
+   "status": "Delivered / Done",
    "value": 1353134.97,
    "products": "K-12 English, Math, Science — Obelas replacement programme.",
    "docs": "PO. SRQ001982; PO. SRQ001978; Shurooq al Mamlka PN 3 Pns.pdf; UPS waybill (08-10); sample DN CEDC-DNN-000002108",
    "notes": "PO NOW RECEIVED (2026-08-09) — this was the biggest open gap on 08-04. Obelas replacement quotation SRQ001982, 1,353,134.97 SAR incl. an extra 10% discount; CS confirmed 08-10 (SO CEDC-SO-000001114), pending stock availability for picking. Payment: 3 promissory notes approved 2026-07-14. FOC replacement in progress: upper-grade science Gr.9–12 (EXPERIENCE CHEMISTRY, EXPERIENCE PHYSICS, BIOLOGY) replaced free of charge for Savvas equivalents — blocked on collecting the old Savvas returns first; Naqel pickup booked 08-10, Taif delivery address given to warehouse. Site is TAIF, not Jeddah — matters for logistics. Origin of the Obelas push was a direct proposal from Miss Marjery (academic supervisor).",
-   "updatedAt": "2026-08-11T14:04:15.000Z",
+   "updatedAt": "2026-09-20T15:25:59.623Z",
    "orders": [
     {
      "id": "shrook-o1",
