@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-09-20T15:26:14.311Z",
+ "savedAt": "2026-09-20T15:26:17.537Z",
  "schools": [
   {
    "id": "ajool",
@@ -727,12 +727,12 @@
      "notes": ""
     }
    ],
-   "status": "Approved – PO collected",
+   "status": "Delivered / Done",
    "value": 257642.27,
    "products": "1-8 Savvas (Elevate Science, MyView), Obelas & Alpha. 764 titles.",
    "docs": "PO. GPS000008; Booklist (Savvas); promissory note (98,263.56)",
    "notes": "Confirmed and in fulfilment; backorder also confirmed. Main order 257,642.27 SAR, quotation GPS000008 — split into two per Info's WhatsApp approval; school opted to KEEP MY VIEW LITERACY AT ITS OWN RESPONSIBILITY, confirmed in writing by Ahmed 07-29. PREVIOUS TRACKER VALUE 174,700.53 WAS STALE. Advance 87,350 SAR received. Promissory note originally 87,350 due 2026-10-30 (customer: Hajar Osama Mohammed Halawani) — AMOUNT UPDATED TO 98,263.56 on 2026-08-06, Ali approved, Finance issued, awaiting customer signature. Backorder GPS000011 (Grade 1 titles, 10 copies) confirmed 2026-08-10 except My View, with 50% advance received 08-09; one title cancelled (Envision Math 2020 Additional Practice WB Gr.1 — CS unable to supply). Obelas replacement quotation GPS000010 (39,819.10) awaiting customer PO as of 08-04. School owner is currently outside the Kingdom; official PO to follow on her return (Tarek, 08-06). Fulfilment: SO CEDC-SO-000001087; PLs CEDC-004659 (fully picked 08-06) and CEDC-004721 (08-11).",
-   "updatedAt": "2026-08-11T14:04:15.000Z",
+   "updatedAt": "2026-09-20T15:26:16.329Z",
    "orders": [
     {
      "id": "greenpeaks-o1",
