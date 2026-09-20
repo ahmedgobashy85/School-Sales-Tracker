@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-09-20T15:26:17.537Z",
+ "savedAt": "2026-09-20T15:26:21.221Z",
  "schools": [
   {
    "id": "ajool",
@@ -53,12 +53,12 @@
      "notes": ""
     }
    ],
-   "status": "Pending late payment",
+   "status": "Delivered / Done",
    "value": 203652.06,
    "products": "K-6 all Savvas & Alpha.",
    "docs": "AIS000051.pdf; Ajool order 2026 booklist",
    "notes": "TWO DISTINCT OPEN THREADS — do not collapse. (1) New quotation AIS000051, 203,652.06 SAR, issued 2026-07-21 with price updated per management: NO RESPONSE from the school since. (2) Separately, the prior 2026 order carries an overdue balance of roughly 100,000 SAR — approximate and uninvoiced, NOT included in the figure above and should not enter pipeline totals without being marked an estimate. Curriculum-replacement proposal (NCC compliance, Obelas recommended) sent 2026-07-28 — awaiting the school's response. OPEN 2026-08-11: warehouse is chasing the status of DN CEDC-DNN-000002024 (sample SO CEDC-SAMPLE-00000226, PL CEDC-004561), asking for the signed DN if already delivered — unresolved; warehouse reports it is still sitting in the warehouse. CORRECTION: the earlier tracker note 'order confirmed & delivered' was wrong — supplier/warehouse and sample movements are not school deliveries.",
-   "updatedAt": "2026-08-11T14:04:15.000Z",
+   "updatedAt": "2026-09-20T15:26:20.018Z",
    "orders": [
     {
      "id": "ajool-o1",
