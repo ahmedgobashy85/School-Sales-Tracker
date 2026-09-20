@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-09-20T15:26:09.822Z",
+ "savedAt": "2026-09-20T15:26:14.311Z",
  "schools": [
   {
    "id": "ajool",
@@ -172,12 +172,12 @@
      "notes": ""
     }
    ],
-   "status": "Approved – PO collected",
+   "status": "Delivered / Done",
    "value": 266425.79,
    "products": "K-8 Savvas & Alpha (incl. Elevate Science). 942 titles (revised).",
    "docs": "PO. AFR000058; Booklist 2026; quotation AFR000058 (final revision)",
    "notes": "PO received 2026-08-02/03. Final value 266,425.79 SAR — quotation AFR000058 revised three times (titles dropped 07-23, Envision Math WB removed 07-28, quantities updated 07-29, extra 5% discount applied at PO stage). PREVIOUS TRACKER VALUE 269,256.91 WAS STALE. Payment: 35,000 advance transferred; balance 231,425.79 via 3 promissory notes requested 08-03/04 — 70,000 due 2026-10-30; 70,000 due 2026-12-30; 91,425.79 due '30/02/2027' (INVALID DATE as written in the source email — almost certainly end-Feb 2027; verify, do not silently correct). A separate 899 SAR transfer on 08-01 is unrelated. Fulfilment: SO CEDC-SO-000001110; PLs CEDC-004599 and CEDC-004678 both fully picked 08-04/08-06. OBELAS RETURN BLOCKED: Tarek requested collection of all myView, Math and Science for middle school (contact Reem, academic director), but PO AFR000058 contains only ELA/phonics — no Math or Science. Ahmed raised this and has had no clarification.",
-   "updatedAt": "2026-08-11T14:04:15.000Z",
+   "updatedAt": "2026-09-20T15:26:13.108Z",
    "orders": [
     {
      "id": "alafkar-o1",
