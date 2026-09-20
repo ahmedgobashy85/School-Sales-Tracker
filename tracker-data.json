@@ -1,5 +1,5 @@
 {
- "savedAt": "2026-08-17T07:38:31.053Z",
+ "savedAt": "2026-09-20T15:25:56.924Z",
  "schools": [
   {
    "id": "ajool",
@@ -933,12 +933,12 @@
      "notes": ""
     }
    ],
-   "status": "Approved – PO collected",
+   "status": "Delivered / Done",
    "value": 1463584.71,
    "products": "K-12 English, Math, Science — Savvas & Alpha. 205 titles across 11 quotations.",
    "docs": "11 PO PDFs (QTR000045–56; QTR000052 not on file); QRT000056.pdf; payment plan (advance + 3 installments to 2026-12-30); bank statement; Cheques 2026.pdf; Qurtubah payment 2026.xlsx",
    "notes": "Largest account, in fulfilment. 4-installment plan ~351,902 SAR each to 2026-12-30; delivery deadline 2026-08-25. MAJOR CHANGE 2026-08-09/10: school decided to STAY WITH SAVVAS and not switch to Obelas — Obelas replacement track closed (QRT000061/62/63/64, 375,369.20, cancelled). Additional titles moved to new quotation QRT000067 (from QRT000050), SO CEDC-SO-000001116, available stock issued 08-11. DATA GAP: QTR000052 missing from the PO folder while 045–056 are otherwise present — numbering gap or missing document, worth surfacing. Next action: order in final dispatch preparation; Ahmed asked Tarek whether to arrange delivery with the school directly.",
-   "updatedAt": "2026-08-11T14:04:15.000Z",
+   "updatedAt": "2026-09-20T15:25:55.721Z",
    "orders": [
     {
      "id": "qurtubah-o1",
